@@ -21,15 +21,30 @@ public class GearOOP {
     private short gear=0;
     private int giri=0;
     private int velocità=0;
+    private final int maxVelocità=250;
+    private final int maxGiri=4808; //*ATTENZIONE maxGiri + 200
+    private final String misuraVelocità="Km/h";
+    private final String misuraGiri="RPM";
+
+    public String getMisuraGiri() {
+        return misuraGiri;
+    }
+
+    public int getMaxGiri() {
+        return maxGiri;
+    }
 
 
 
-
-
-
+    public String getMisuraVelocità() {
+        return misuraVelocità;
+    }
 
     public int getGiri() {
         return giri;
+    }
+    public int getMaxVelocità() {
+        return maxVelocità;
     }
 
     public int getVelocità() {
