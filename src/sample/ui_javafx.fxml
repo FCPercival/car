@@ -8,6 +8,7 @@
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
@@ -54,13 +55,17 @@
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
             <Button fx:id="ui_b_velocità" layoutX="282.0" layoutY="288.0" mnemonicParsing="false" onMousePressed="#speedUp" text="Button" />
-            <ProgressBar fx:id="ui_giri" layoutX="41.0" layoutY="86.0" prefWidth="200.0" progress="0.0" style="-fx-shape: circle; -fx-border-radius: 50%;" />
-            <ProgressBar fx:id="ui_velocità" layoutX="348.0" layoutY="86.0" prefWidth="200.0" progress="0.0" />
+            <ProgressBar fx:id="ui_giri" layoutX="54.0" layoutY="86.0" prefWidth="200.0" progress="0.0" style="-fx-shape: Circle;" stylesheets="@Style.css" />
+            <ProgressBar fx:id="ui_velocità" layoutX="361.0" layoutY="85.0" prefWidth="200.0" progress="0.0" />
             <Button layoutX="41.0" layoutY="201.0" mnemonicParsing="false" onAction="#gearUp" text="^" />
             <Button layoutX="41.0" layoutY="243.0" mnemonicParsing="false" onAction="#gearDown" rotate="180.0" text="^" />
             <Text fx:id="ui_t_giri" layoutX="118.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giri: " />
             <Text fx:id="ui_t_velocità" layoutX="437.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Velocità: " />
-            <Text fx:id="ui_t_marcia" layoutX="282.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+            <Text fx:id="ui_t_marcia" layoutX="302.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
          </children>
     </AnchorPane>
   </children>
