@@ -21,16 +21,4 @@ jobs:
           automatic_release_tag: "latest"
           prerelease: true
           title: "Development Build"
-          files: |
-            out/artifacts/carfork/carfork.jar
-            out/artifacts/carfork
-            out/artifacts/carfork/*.jar
-            *.jar
-            car/out/artifacts/carfork/carfork.jar
-            car/out/artifacts/carfork
-            car/out/artifacts/carfork/*.jar
-            car/*.jar
-            ./out/artifacts/carfork/carfork.jar
-            ./out/artifacts/carfork
-            ./out/artifacts/carfork/*.jar
-            ./*.jar
+          files: "*.jar"
