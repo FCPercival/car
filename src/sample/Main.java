@@ -16,7 +16,6 @@ public class Main extends Application {
         primaryStage.setTitle("Car Alpha");
         primaryStage.setScene(new Scene(root, 960, 575));
         primaryStage.show();
-        
     }
 
 
