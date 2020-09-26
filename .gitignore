@@ -2,3 +2,5 @@
 .idea/.name
 .idea/workspace.xml
 car.iml
+car/out/artifacts/carfork/carfork.html
+car/out/artifacts/carfork/carfork.jnlp
