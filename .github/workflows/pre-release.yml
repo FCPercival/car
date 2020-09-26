@@ -25,3 +25,4 @@ jobs:
           files: |
             LICENSE
             out/artifacts/carfork/carfork.jar
+            README.md
