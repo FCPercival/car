@@ -23,6 +23,5 @@ jobs:
           title: "Development Build"
           files: |
             LICENSE
-            "out/artifacts/carfork/carfork.jar"
-            "./out/artifacts/carfork/carfork.jar"
+            *.jar
             README.md
