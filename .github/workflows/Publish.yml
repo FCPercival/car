@@ -1,26 +1,32 @@
-name: Publish
+name: "pre-release"
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+      - "master"
 
 jobs:
-  build:
-    name: Publish binaries
-    runs-on: ubuntu-latest
+  pre-release:
+    name: "Pre Release"
+    runs-on: "ubuntu-latest"
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build
-      run: cargo build --release
-    - name: Upload binaries to release
-      uses: svenstaro/upload-release-action@v2
-      with:
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: out/artifacts/carfork/carfork.jar
-        asset_name: carfork
-        tag: ${{ github.ref }}
-        overwrite: true
-        body: "This is my release text"
+      # ...
+      - name: "Build & test"
+        run: |
+          echo "done!"
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
+          files: |
+            out/artifacts/carfork/carfork.jar
+            out/artifacts/carfork
+            out/artifacts/carfork/*.jar
+            *.jar
+            car/out/artifacts/carfork/carfork.jar
+            car/out/artifacts/carfork
+            car/out/artifacts/carfork/*.jar
+            car/*.jar
