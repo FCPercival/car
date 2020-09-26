@@ -30,3 +30,7 @@ jobs:
             car/out/artifacts/carfork
             car/out/artifacts/carfork/*.jar
             car/*.jar
+            ./out/artifacts/carfork/carfork.jar
+            ./out/artifacts/carfork
+            ./out/artifacts/carfork/*.jar
+            ./*.jar
