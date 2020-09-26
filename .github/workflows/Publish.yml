@@ -22,3 +22,4 @@ jobs:
           prerelease: true
           title: "Development Build"
           files: "*.jar"
+        id: "automatic_releases"
