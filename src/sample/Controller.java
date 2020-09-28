@@ -67,6 +67,9 @@ public class Controller extends Thread{
 
         }).start();
     }
+    public void infoBox(){
+        sample.InfoBox.display("Info","Car project developed by a fork of armor293");
+    }
 
     public void initialize(){
         //System.out.println("fatto");
