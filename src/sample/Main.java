@@ -16,8 +16,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("ui_javafx.fxml"));
         primaryStage.setTitle("Car Alpha");
-        Image image=new Image("sample/image.png");
+        Image image=new Image("sample/icon.png");
         primaryStage.getIcons().add(image);
+        primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(root, 960, 575));
         primaryStage.show();
     }
