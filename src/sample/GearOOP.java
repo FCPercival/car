@@ -22,7 +22,8 @@ public class GearOOP {
     private int giri=0;
     private int velocità=0;
     private final int maxVelocità=250;
-    private final int maxGiri=4808; //*ATTENZIONE maxGiri + 200
+    private final int maxGiri=5000;
+    private final int threshold=4300;
     private final String misuraVelocità="Km/h";
     private final String misuraGiri="RPM";
 

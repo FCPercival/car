@@ -1,5 +1,6 @@
 package sample;
 
+import eu.hansolo.medusa.Gauge;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
@@ -19,6 +20,10 @@ public class Controller extends Thread{
     Text ui_t_giri;
     @FXML
     Text ui_t_marcia;
+    @FXML
+    Gauge ui_p_giri;
+    @FXML
+    Gauge ui_p_velocità;
 
 
     protected GearOOP gearOOP=new GearOOP();
@@ -31,6 +36,9 @@ public class Controller extends Thread{
         ui_t_marcia.setText(String.valueOf(gearOOP.getGear()));
         System.out.println(gearOOP.getGear());
         ui_giri.setProgress(0.2);
+
+        ui_p_giri.setValue(2000);
+        //VAL DA CAMBIARE SET OOP
     }
     public void gearDown(){
         if((gearOOP.getGear()== -1 && (gearOOP.getGear()-1)== -2)){
@@ -45,10 +53,15 @@ public class Controller extends Thread{
     public void speedUp(){
         new Thread(() -> {
             while (true){
-                if(!ui_b_velocità.isPressed() || ui_velocità.getProgress()>=0.999999 ||ui_giri.getProgress()>=0.999999)
+                if(!ui_b_velocità.isPressed() || ui_p_velocità.getValue() >= gearOOP.getMaxVelocità()-11 || ui_p_giri.getValue()>=gearOOP.getMaxGiri()-120) /*|| ui_velocità.getProgress()>=0.999999 ||ui_giri.getProgress()>=0.999999*/
                     return;
-                System.out.println(ui_velocità.getProgress() + 0.01);
+
+                //System.out.println(ui_velocità.getProgress() + 0.01);
                 ui_velocità.setProgress(ui_velocità.getProgress() + 0.01);
+                System.out.println(ui_p_velocità.getValue());
+                ui_p_giri.setValue(ui_p_giri.getValue() + 250);
+                ui_p_velocità.setValue(ui_p_velocità.getValue() + 4);
+
                 ui_giri.setProgress(ui_giri.getProgress() + 0.065);
                 try {
                     Thread.sleep(100);
@@ -60,6 +73,7 @@ public class Controller extends Thread{
                 ui_t_giri.setText(String.valueOf(Math.round(ui_giri.getProgress()*gearOOP.getMaxGiri()))+" "+gearOOP.getMisuraGiri());
 
 
+
             }
 
 
@@ -68,7 +82,11 @@ public class Controller extends Thread{
         }).start();
     }
     public void infoBox(){
-        sample.InfoBox.display("Info","Car project developed by a fork of armor293");
+        sample.InfoBox.display("Info","Car project developed by Federico Chiodo, in collaboration with armor293");
+    }
+
+    public void exit(){
+        System.exit(0);
     }
 
     public void initialize(){
