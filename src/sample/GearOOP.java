@@ -36,6 +36,12 @@ public class GearOOP {
     }
 
 
+    public void setGiri(int giri) {
+        this.giri = giri;
+    }
+    public void setVelocità(int velocità) {
+        this.velocità = velocità;
+    }
 
     public String getMisuraVelocità() {
         return misuraVelocità;
@@ -59,7 +65,6 @@ public class GearOOP {
     public void setGear(short gear) {
         if ((this.gear== -1 && gear== -2) || (this.gear == 6 && gear==7)){
             return;}
-
 
         this.gear = gear;
 

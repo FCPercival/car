@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="carfork.jnlp">
+  <information>
+    <title>carfork</title>
+    <vendor>Unknown</vendor>
+    <description>carfork</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Medusa-8.3.jar" size="1497695" download="eager" />
+    <jar href="carfork.jar" size="32412" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="sample.Main"  name="carfork" />
+  <update check="background"/>
+</jnlp>
