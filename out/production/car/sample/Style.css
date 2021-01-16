@@ -1,27 +1,37 @@
-.progress{
-  position: relative;
-  margin: 4px;
-  float:left;
-  text-align: center;
-}
-.barOverflow{ /* Wraps the rotating .bar */
-  position: relative;
-  width: 180px; height: 90px; /* Half circle (overflow) */
-  margin-bottom: -14px; /* bring the numbers up */
-  overflow: hidden;
-}
-.bar{
-  position: absolute;
-  top: 0; left: 0;
-  width: 180px; height: 180px; /* full circle! */
-  border-radius: 50%;
-  box-sizing: border-box;
-  border: 10px solid #ccc;     /* half gray, */
-  border-bottom-color: #0bf;  /* half azure */
-  border-right-color: #0bf;
+/*.progress{
+/*  position: relative;
+/*  margin: 4px;
+/*  float:left;
+/*  text-align: center;
+/*}
+/*.barOverflow{ /* Wraps the rotating .bar */
+/*  position: relative;
+/*  width: 180px; height: 90px; /* Half circle (overflow) */
+/*  margin-bottom: -14px; /* bring the numbers up */
+/*  overflow: hidden;
+/*}
+/*.bar{
+/*  position: absolute;
+/*  top: 0; left: 0;
+/*  width: 180px; height: 180px; /* full circle! */
+/*  border-radius: 50%;
+/*  box-sizing: border-box;
+/*  border: 10px solid #ccc;     /* half gray, */
+/*  border-bottom-color: #0bf;  /* half azure */
+/*  border-right-color: #0bf;
+/*} */
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(
+        from 0px .75em to .75em 0px,
+        repeat,
+        -fx-accent 0%,
+        -fx-accent 49%,
+        derive(-fx-accent, 30%) 50%,
+        derive(-fx-accent, 30%) 99%
+    );
 }
 
-progressbar{
+/*progressbar{
         "-fx-shape:\"M0 0A1,1 0 0 0 2,0Z\";"
 
         // ensure x/y-scaling of shape will be 1:1
@@ -29,4 +39,4 @@ progressbar{
         + "-fx-min-width: 200;"
         + "-fx-max-height: 100;"
         + "-fx-max-width: 200;"
-}
+}*/
